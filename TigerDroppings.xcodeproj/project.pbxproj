@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0038A65F1FCB59E9006998BB /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038A65E1FCB59E9006998BB /* APIManagerTests.swift */; };
+		0038A6601FCB5DE2006998BB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6E2631FCB054600390648 /* APIManager.swift */; };
+		0038A6611FCB5E11006998BB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D6E26F1FCB55C100390648 /* Alamofire.framework */; };
 		004367D21FCA6DA500A2C020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004367D11FCA6DA500A2C020 /* AppDelegate.swift */; };
 		004367D41FCA6DA500A2C020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004367D31FCA6DA500A2C020 /* ViewController.swift */; };
 		004367D71FCA6DA500A2C020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004367D51FCA6DA500A2C020 /* Main.storyboard */; };
@@ -14,6 +17,19 @@
 		004367DC1FCA6DA500A2C020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004367DA1FCA6DA500A2C020 /* LaunchScreen.storyboard */; };
 		004367E71FCA6DA500A2C020 /* TigerDroppingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004367E61FCA6DA500A2C020 /* TigerDroppingsTests.swift */; };
 		004367F21FCA6DA500A2C020 /* TigerDroppingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004367F11FCA6DA500A2C020 /* TigerDroppingsUITests.swift */; };
+		004368001FCA6E6A00A2C020 /* BoardTitlesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004367FF1FCA6E6A00A2C020 /* BoardTitlesViewCell.swift */; };
+		004368021FCA719300A2C020 /* BoardTitlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004368011FCA719300A2C020 /* BoardTitlesViewController.swift */; };
+		004368041FCA741200A2C020 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004368031FCA741200A2C020 /* Board.swift */; };
+		004368051FCA79E700A2C020 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004368031FCA741200A2C020 /* Board.swift */; };
+		00C037871FCB693B00F1B505 /* BoardThreadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C037861FCB693B00F1B505 /* BoardThreadsViewController.swift */; };
+		00C037891FCB69F600F1B505 /* BoardThreadsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C037881FCB69F600F1B505 /* BoardThreadsViewCell.swift */; };
+		00C0378B1FCB754A00F1B505 /* TDParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0378A1FCB754A00F1B505 /* TDParser.swift */; };
+		00C0378C1FCB754E00F1B505 /* TDParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0378A1FCB754A00F1B505 /* TDParser.swift */; };
+		00C0378E1FCBD07700F1B505 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C0378D1FCBD07700F1B505 /* Fuzi.framework */; };
+		00C0378F1FCBD07700F1B505 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00C0378D1FCBD07700F1B505 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		00D6E2641FCB054600390648 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6E2631FCB054600390648 /* APIManager.swift */; };
+		00D6E2701FCB55C200390648 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D6E26F1FCB55C100390648 /* Alamofire.framework */; };
+		00D6E2711FCB55C200390648 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00D6E26F1FCB55C100390648 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +49,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		00D6E26A1FCB505B00390648 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				00C0378F1FCBD07700F1B505 /* Fuzi.framework in Embed Frameworks */,
+				00D6E2711FCB55C200390648 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0038A65E1FCB59E9006998BB /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
 		004367CE1FCA6DA500A2C020 /* TigerDroppings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TigerDroppings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		004367D11FCA6DA500A2C020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		004367D31FCA6DA500A2C020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +79,16 @@
 		004367ED1FCA6DA500A2C020 /* TigerDroppingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TigerDroppingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		004367F11FCA6DA500A2C020 /* TigerDroppingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TigerDroppingsUITests.swift; sourceTree = "<group>"; };
 		004367F31FCA6DA500A2C020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		004367FF1FCA6E6A00A2C020 /* BoardTitlesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTitlesViewCell.swift; sourceTree = "<group>"; };
+		004368011FCA719300A2C020 /* BoardTitlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTitlesViewController.swift; sourceTree = "<group>"; };
+		004368031FCA741200A2C020 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		00C037861FCB693B00F1B505 /* BoardThreadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardThreadsViewController.swift; sourceTree = "<group>"; };
+		00C037881FCB69F600F1B505 /* BoardThreadsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardThreadsViewCell.swift; sourceTree = "<group>"; };
+		00C0378A1FCB754A00F1B505 /* TDParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDParser.swift; sourceTree = "<group>"; };
+		00C0378D1FCBD07700F1B505 /* Fuzi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fuzi.framework; path = Carthage/Build/iOS/Fuzi.framework; sourceTree = "<group>"; };
+		00D6E2631FCB054600390648 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		00D6E26B1FCB506B00390648 /* HTMLReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTMLReader.framework; path = Carthage/Build/iOS/HTMLReader.framework; sourceTree = "<group>"; };
+		00D6E26F1FCB55C100390648 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C0378E1FCBD07700F1B505 /* Fuzi.framework in Frameworks */,
+				00D6E2701FCB55C200390648 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0038A6611FCB5E11006998BB /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +122,9 @@
 		004367C51FCA6DA500A2C020 = {
 			isa = PBXGroup;
 			children = (
+				00C0378D1FCBD07700F1B505 /* Fuzi.framework */,
+				00D6E26F1FCB55C100390648 /* Alamofire.framework */,
+				00D6E26B1FCB506B00390648 /* HTMLReader.framework */,
 				004367D01FCA6DA500A2C020 /* TigerDroppings */,
 				004367E51FCA6DA500A2C020 /* TigerDroppingsTests */,
 				004367F01FCA6DA500A2C020 /* TigerDroppingsUITests */,
@@ -100,9 +148,16 @@
 				004367D11FCA6DA500A2C020 /* AppDelegate.swift */,
 				004367D31FCA6DA500A2C020 /* ViewController.swift */,
 				004367D51FCA6DA500A2C020 /* Main.storyboard */,
+				004368011FCA719300A2C020 /* BoardTitlesViewController.swift */,
+				00C037861FCB693B00F1B505 /* BoardThreadsViewController.swift */,
+				004367FF1FCA6E6A00A2C020 /* BoardTitlesViewCell.swift */,
+				00C037881FCB69F600F1B505 /* BoardThreadsViewCell.swift */,
 				004367D81FCA6DA500A2C020 /* Assets.xcassets */,
 				004367DA1FCA6DA500A2C020 /* LaunchScreen.storyboard */,
 				004367DD1FCA6DA500A2C020 /* Info.plist */,
+				00D6E2631FCB054600390648 /* APIManager.swift */,
+				004368031FCA741200A2C020 /* Board.swift */,
+				00C0378A1FCB754A00F1B505 /* TDParser.swift */,
 			);
 			path = TigerDroppings;
 			sourceTree = "<group>";
@@ -111,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				004367E61FCA6DA500A2C020 /* TigerDroppingsTests.swift */,
+				0038A65E1FCB59E9006998BB /* APIManagerTests.swift */,
 				004367E81FCA6DA500A2C020 /* Info.plist */,
 			);
 			path = TigerDroppingsTests;
@@ -135,6 +191,8 @@
 				004367CA1FCA6DA500A2C020 /* Sources */,
 				004367CB1FCA6DA500A2C020 /* Frameworks */,
 				004367CC1FCA6DA500A2C020 /* Resources */,
+				00D6E26A1FCB505B00390648 /* Embed Frameworks */,
+				00D6E26E1FCB50BA00390648 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,12 +312,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00D6E26E1FCB50BA00390648 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Fuzi.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofie.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Fuzi.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		004367CA1FCA6DA500A2C020 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D6E2641FCB054600390648 /* APIManager.swift in Sources */,
+				004368021FCA719300A2C020 /* BoardTitlesViewController.swift in Sources */,
 				004367D41FCA6DA500A2C020 /* ViewController.swift in Sources */,
+				00C037891FCB69F600F1B505 /* BoardThreadsViewCell.swift in Sources */,
+				00C0378B1FCB754A00F1B505 /* TDParser.swift in Sources */,
+				004368041FCA741200A2C020 /* Board.swift in Sources */,
+				00C037871FCB693B00F1B505 /* BoardThreadsViewController.swift in Sources */,
+				004368001FCA6E6A00A2C020 /* BoardTitlesViewCell.swift in Sources */,
 				004367D21FCA6DA500A2C020 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +353,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C0378C1FCB754E00F1B505 /* TDParser.swift in Sources */,
+				0038A6601FCB5DE2006998BB /* APIManager.swift in Sources */,
+				004368051FCA79E700A2C020 /* Board.swift in Sources */,
 				004367E71FCA6DA500A2C020 /* TigerDroppingsTests.swift in Sources */,
+				0038A65F1FCB59E9006998BB /* APIManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +516,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = TigerDroppings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jblairkiel.TigerDroppings;
@@ -441,6 +539,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = TigerDroppings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jblairkiel.TigerDroppings;
@@ -456,6 +563,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TigerDroppingsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jblairkiel.TigerDroppingsTests;
@@ -472,6 +583,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TigerDroppingsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jblairkiel.TigerDroppingsTests;

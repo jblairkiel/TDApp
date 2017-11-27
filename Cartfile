@@ -1,0 +1,3 @@
+github "Alamofire/Alamofire" ~> 4.5
+
+github "cezheng/Fuzi" ~> 1.0.0
