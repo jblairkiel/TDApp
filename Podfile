@@ -4,7 +4,7 @@ use_frameworks!
 
  
 def testing_pods
-  pod 'Fuzi', '~> 2.0.1'
+  pod 'Fuzi', '~> 1.0.0'
   pod 'Alamofire', '~> 4.5.1'
 end
  
