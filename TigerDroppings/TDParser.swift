@@ -7,7 +7,6 @@
 //
 
 import Fuzi
-import HTMLReader
 
 public class TDParser{
     

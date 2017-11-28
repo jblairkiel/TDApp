@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0038A65F1FCB59E9006998BB /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038A65E1FCB59E9006998BB /* APIManagerTests.swift */; };
 		0038A6601FCB5DE2006998BB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6E2631FCB054600390648 /* APIManager.swift */; };
-		0038A6611FCB5E11006998BB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D6E26F1FCB55C100390648 /* Alamofire.framework */; };
 		004367D21FCA6DA500A2C020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004367D11FCA6DA500A2C020 /* AppDelegate.swift */; };
 		004367D41FCA6DA500A2C020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004367D31FCA6DA500A2C020 /* ViewController.swift */; };
 		004367D71FCA6DA500A2C020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004367D51FCA6DA500A2C020 /* Main.storyboard */; };
@@ -25,11 +24,8 @@
 		00C037891FCB69F600F1B505 /* BoardThreadsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C037881FCB69F600F1B505 /* BoardThreadsViewCell.swift */; };
 		00C0378B1FCB754A00F1B505 /* TDParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0378A1FCB754A00F1B505 /* TDParser.swift */; };
 		00C0378C1FCB754E00F1B505 /* TDParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0378A1FCB754A00F1B505 /* TDParser.swift */; };
-		00C0378E1FCBD07700F1B505 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C0378D1FCBD07700F1B505 /* Fuzi.framework */; };
-		00C0378F1FCBD07700F1B505 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00C0378D1FCBD07700F1B505 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00D6E2641FCB054600390648 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6E2631FCB054600390648 /* APIManager.swift */; };
-		00D6E2701FCB55C200390648 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D6E26F1FCB55C100390648 /* Alamofire.framework */; };
-		00D6E2711FCB55C200390648 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00D6E26F1FCB55C100390648 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEA193D05E7CBF25E7FF36A2 /* Pods_TigerDroppings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFCC7D2677FDE06A33E44B6 /* Pods_TigerDroppings.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +52,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				00C0378F1FCBD07700F1B505 /* Fuzi.framework in Embed Frameworks */,
-				00D6E2711FCB55C200390648 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,10 +79,17 @@
 		00C037861FCB693B00F1B505 /* BoardThreadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardThreadsViewController.swift; sourceTree = "<group>"; };
 		00C037881FCB69F600F1B505 /* BoardThreadsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardThreadsViewCell.swift; sourceTree = "<group>"; };
 		00C0378A1FCB754A00F1B505 /* TDParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDParser.swift; sourceTree = "<group>"; };
-		00C0378D1FCBD07700F1B505 /* Fuzi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fuzi.framework; path = Carthage/Build/iOS/Fuzi.framework; sourceTree = "<group>"; };
 		00C037931FCD04FD00F1B505 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		00D6E2631FCB054600390648 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		00D6E26F1FCB55C100390648 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		35DA067D63AED007286D791A /* Pods-TigerDroppings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerDroppings.release.xcconfig"; path = "Pods/Target Support Files/Pods-TigerDroppings/Pods-TigerDroppings.release.xcconfig"; sourceTree = "<group>"; };
+		7474B09E0B577D1F4E3C4D8A /* Pods_TigerDroppingsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TigerDroppingsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE2B346A0378DBC95D3A6A2 /* Pods-TigerDroppingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerDroppingsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TigerDroppingsTests/Pods-TigerDroppingsTests.release.xcconfig"; sourceTree = "<group>"; };
+		ADFCC7D2677FDE06A33E44B6 /* Pods_TigerDroppings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TigerDroppings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B23A706AC197F97BA92A59C0 /* Pods_TigerDroppingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TigerDroppingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10350E57960ADD8242AD472 /* Pods-TigerDroppings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerDroppings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TigerDroppings/Pods-TigerDroppings.debug.xcconfig"; sourceTree = "<group>"; };
+		D2740740AA78A65DB3A69E90 /* Pods-TigerDroppingsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerDroppingsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TigerDroppingsUITests/Pods-TigerDroppingsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D712004FFB6BDBE852409FCF /* Pods-TigerDroppingsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerDroppingsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TigerDroppingsTests/Pods-TigerDroppingsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F62849652BF0907ECACBF54E /* Pods-TigerDroppingsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerDroppingsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TigerDroppingsUITests/Pods-TigerDroppingsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C0378E1FCBD07700F1B505 /* Fuzi.framework in Frameworks */,
-				00D6E2701FCB55C200390648 /* Alamofire.framework in Frameworks */,
+				AEA193D05E7CBF25E7FF36A2 /* Pods_TigerDroppings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0038A6611FCB5E11006998BB /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,12 +122,12 @@
 			isa = PBXGroup;
 			children = (
 				00C037931FCD04FD00F1B505 /* .travis.yml */,
-				00C0378D1FCBD07700F1B505 /* Fuzi.framework */,
-				00D6E26F1FCB55C100390648 /* Alamofire.framework */,
 				004367D01FCA6DA500A2C020 /* TigerDroppings */,
 				004367E51FCA6DA500A2C020 /* TigerDroppingsTests */,
 				004367F01FCA6DA500A2C020 /* TigerDroppingsUITests */,
 				004367CF1FCA6DA500A2C020 /* Products */,
+				DB6C49460A627F138D9959EE /* Pods */,
+				C49AFED0D15993C9D3D8F626 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +180,29 @@
 			path = TigerDroppingsUITests;
 			sourceTree = "<group>";
 		};
+		C49AFED0D15993C9D3D8F626 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCC7D2677FDE06A33E44B6 /* Pods_TigerDroppings.framework */,
+				B23A706AC197F97BA92A59C0 /* Pods_TigerDroppingsTests.framework */,
+				7474B09E0B577D1F4E3C4D8A /* Pods_TigerDroppingsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB6C49460A627F138D9959EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D10350E57960ADD8242AD472 /* Pods-TigerDroppings.debug.xcconfig */,
+				35DA067D63AED007286D791A /* Pods-TigerDroppings.release.xcconfig */,
+				D712004FFB6BDBE852409FCF /* Pods-TigerDroppingsTests.debug.xcconfig */,
+				9FE2B346A0378DBC95D3A6A2 /* Pods-TigerDroppingsTests.release.xcconfig */,
+				D2740740AA78A65DB3A69E90 /* Pods-TigerDroppingsUITests.debug.xcconfig */,
+				F62849652BF0907ECACBF54E /* Pods-TigerDroppingsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,11 +210,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 004367F61FCA6DA500A2C020 /* Build configuration list for PBXNativeTarget "TigerDroppings" */;
 			buildPhases = (
+				823F216979CA2314D45F157F /* [CP] Check Pods Manifest.lock */,
 				004367CA1FCA6DA500A2C020 /* Sources */,
 				004367CB1FCA6DA500A2C020 /* Frameworks */,
 				004367CC1FCA6DA500A2C020 /* Resources */,
 				00D6E26A1FCB505B00390648 /* Embed Frameworks */,
 				00D6E26E1FCB50BA00390648 /* ShellScript */,
+				ECA389CA9C33FCE50EDACB74 /* [CP] Embed Pods Frameworks */,
+				F2B39987A67FF05DB5262D83 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,9 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 004367F91FCA6DA500A2C020 /* Build configuration list for PBXNativeTarget "TigerDroppingsTests" */;
 			buildPhases = (
+				3CCE7B58F60B70E292553172 /* [CP] Check Pods Manifest.lock */,
 				004367DE1FCA6DA500A2C020 /* Sources */,
 				004367DF1FCA6DA500A2C020 /* Frameworks */,
 				004367E01FCA6DA500A2C020 /* Resources */,
+				A40A2778808F36225A33B6CC /* [CP] Embed Pods Frameworks */,
+				ABF8B48BEADC942042231A0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,9 +253,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 004367FC1FCA6DA500A2C020 /* Build configuration list for PBXNativeTarget "TigerDroppingsUITests" */;
 			buildPhases = (
+				23D3E106019886F56AE75EA1 /* [CP] Check Pods Manifest.lock */,
 				004367E91FCA6DA500A2C020 /* Sources */,
 				004367EA1FCA6DA500A2C020 /* Frameworks */,
 				004367EB1FCA6DA500A2C020 /* Resources */,
+				4A01867B8E940924DD88A7C9 /* [CP] Embed Pods Frameworks */,
+				37EF4DC48351660873F42119 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,16 +350,171 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Fuzi.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofie.framework",
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Fuzi.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
+		};
+		23D3E106019886F56AE75EA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TigerDroppingsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37EF4DC48351660873F42119 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TigerDroppingsUITests/Pods-TigerDroppingsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CCE7B58F60B70E292553172 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TigerDroppingsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A01867B8E940924DD88A7C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TigerDroppingsUITests/Pods-TigerDroppingsUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TigerDroppingsUITests/Pods-TigerDroppingsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		823F216979CA2314D45F157F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TigerDroppings-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A40A2778808F36225A33B6CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TigerDroppingsTests/Pods-TigerDroppingsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TigerDroppingsTests/Pods-TigerDroppingsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABF8B48BEADC942042231A0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TigerDroppingsTests/Pods-TigerDroppingsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECA389CA9C33FCE50EDACB74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TigerDroppings/Pods-TigerDroppings-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TigerDroppings/Pods-TigerDroppings-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2B39987A67FF05DB5262D83 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TigerDroppings/Pods-TigerDroppings-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -513,14 +699,14 @@
 		};
 		004367F71FCA6DA500A2C020 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D10350E57960ADD8242AD472 /* Pods-TigerDroppings.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"<Multiple",
 					"values>",
 					"$(SDKROOT)/usr/include/libxml2",
@@ -536,14 +722,14 @@
 		};
 		004367F81FCA6DA500A2C020 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35DA067D63AED007286D791A /* Pods-TigerDroppings.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"<Multiple",
 					"values>",
 					"$(SDKROOT)/usr/include/libxml2",
@@ -559,14 +745,12 @@
 		};
 		004367FA1FCA6DA500A2C020 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D712004FFB6BDBE852409FCF /* Pods-TigerDroppingsTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = TigerDroppingsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jblairkiel.TigerDroppingsTests;
@@ -579,14 +763,12 @@
 		};
 		004367FB1FCA6DA500A2C020 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FE2B346A0378DBC95D3A6A2 /* Pods-TigerDroppingsTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = TigerDroppingsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jblairkiel.TigerDroppingsTests;
@@ -599,8 +781,9 @@
 		};
 		004367FD1FCA6DA500A2C020 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2740740AA78A65DB3A69E90 /* Pods-TigerDroppingsUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TigerDroppingsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -614,8 +797,9 @@
 		};
 		004367FE1FCA6DA500A2C020 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62849652BF0907ECACBF54E /* Pods-TigerDroppingsUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TigerDroppingsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
