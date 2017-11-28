@@ -88,7 +88,6 @@
 		00C0378D1FCBD07700F1B505 /* Fuzi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fuzi.framework; path = Carthage/Build/iOS/Fuzi.framework; sourceTree = "<group>"; };
 		00C037931FCD04FD00F1B505 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		00D6E2631FCB054600390648 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		00D6E26B1FCB506B00390648 /* HTMLReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTMLReader.framework; path = Carthage/Build/iOS/HTMLReader.framework; sourceTree = "<group>"; };
 		00D6E26F1FCB55C100390648 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +125,6 @@
 				00C037931FCD04FD00F1B505 /* .travis.yml */,
 				00C0378D1FCBD07700F1B505 /* Fuzi.framework */,
 				00D6E26F1FCB55C100390648 /* Alamofire.framework */,
-				00D6E26B1FCB506B00390648 /* HTMLReader.framework */,
 				004367D01FCA6DA500A2C020 /* TigerDroppings */,
 				004367E51FCA6DA500A2C020 /* TigerDroppingsTests */,
 				004367F01FCA6DA500A2C020 /* TigerDroppingsUITests */,
