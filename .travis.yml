@@ -1,3 +1,4 @@
 language: objective-c
 xcode_project: TigerDroppings.xcodeproj
 xcode_scheme: TigerDroppings
+script: xctool -project TigerDroppings.xcodeproj -scheme TigerDroppings build test CODE_SIGNING_REQUIRED=NO
