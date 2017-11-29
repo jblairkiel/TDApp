@@ -3,7 +3,7 @@ xcode_project: TigerDroppings.xcodeproj
 xcode_scheme: TigerDroppings
 osx_image: xcode9.1
 script:
-xctool
+    xctool
     -workspace TigerDroppings.xcworkspace
     -scheme TigerDroppings
     -sdk iphonesimulator
@@ -12,5 +12,3 @@ xctool
     ONLY_ACTIVE_ARCH=NO
     CODE_SIGN_IDENTITY=""
     CODE_SIGNING_REQUIRED=NO
-
-#xctool -project TigerDroppings.xcodeproj -scheme TigerDroppings build test CODE_SIGNING_REQUIRED=NO
