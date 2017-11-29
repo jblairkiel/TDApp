@@ -2,13 +2,4 @@ language: objective-c
 xcode_project: TigerDroppings.xcodeproj
 xcode_scheme: TigerDroppings
 osx_image: xcode9.1
-script:
-    xctool
-    -workspace TigerDroppings.xcworkspace
-    -scheme TigerDroppings
-    -sdk iphonesimulator
-    -destination 'platform=iOS Simulator,name=iPhone 8 Plus'
-    build
-    ONLY_ACTIVE_ARCH=NO
-    CODE_SIGN_IDENTITY=""
-    CODE_SIGNING_REQUIRED=NO
+script: xctool -project TigerDroppings.xcodeproj -scheme TigerDroppings build CODE_SIGNING_REQUIRED=NO
