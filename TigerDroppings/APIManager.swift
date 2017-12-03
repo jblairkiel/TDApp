@@ -13,7 +13,7 @@ public class APIManager {
     
     
     init(){
-        print("Initialize")
+        
     }
     
     public func makeHTTPGetRequest(path: String, success: @escaping (String) -> Void){

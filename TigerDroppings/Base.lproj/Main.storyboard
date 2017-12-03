@@ -26,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agc-Xd-EmV" userLabel="Board Label">
-                                            <rect key="frame" x="17" y="0.0" width="342" height="29"/>
+                                            <rect key="frame" x="17" y="5" width="342" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -37,7 +37,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="boardNameLabel" destination="agc-Xd-EmV" id="B8A-6g-0wD"/>
-                                    <segue destination="RaU-TU-sWi" kind="show" id="dX4-wF-8b3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -47,6 +46,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Boards" id="sld-eA-b7u"/>
+                    <connections>
+                        <segue destination="RaU-TU-sWi" kind="show" identifier="OpenThreadsSegue" id="rR7-xG-B3k"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6A9-Xp-xQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,25 +63,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoardThreadsViewCell" rowHeight="40" id="eQO-zD-HL2" userLabel="BoardThreadsViewCell" customClass="BoardThreadsViewCell" customModule="TigerDroppings" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoardThreadsViewCell" rowHeight="60" id="eQO-zD-HL2" userLabel="BoardThreadsViewCell" customClass="BoardThreadsViewCell" customModule="TigerDroppings" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eQO-zD-HL2" id="22Q-jr-1rh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mux-38-7km" userLabel="Board Label">
-                                            <rect key="frame" x="17" y="0.0" width="342" height="29"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSS-SG-vKV" userLabel="ThreadAuthor">
+                                            <rect key="frame" x="4" y="29" width="323" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mux-38-7km" userLabel="ThreadTitle">
+                                            <rect key="frame" x="4" y="0.0" width="375" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="boardNameLabel" destination="mux-38-7km" id="UFS-4p-Pcg"/>
+                                    <outlet property="threadAuthorLabel" destination="HSS-SG-vKV" id="pFu-uH-nt7"/>
+                                    <outlet property="threadNameLabel" destination="mux-38-7km" id="W7R-EQ-cqt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,10 +100,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Board Title" id="jDP-V6-fET"/>
+                    <connections>
+                        <outlet property="boardThreadTitle" destination="jDP-V6-fET" id="fSF-nn-zOy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXb-1W-2ux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="213"/>
+            <point key="canvasLocation" x="2242.4000000000001" y="211.84407796101951"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7vh-6b-pa8">

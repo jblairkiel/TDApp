@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   BoardNames.plist
+   TigerDroppings
+
+   Created by James Kiel on 12/2/17.
+   Copyright (c) 2017 James Kiel. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>Home</string>
+        <string>LSU Recruiting</string>
+        <string>SEC Rant</string>
+        <string>SEC Score Board</string>
+        <string>SEC Tickets</string>
+        <string>O-T Lounge</string>
+        <string>Help Board</string>
+        <string>ATL Sports</string>
+        <string>Alabama Sports</string>
+        <string>Arkansas Sports</string>
+        <string>Auburn Sports</string>
+        <string>Florida Sports</string>
+        <string>Georgia Sports</string>
+        <string>Kentucky Sports</string>
+        <string>LSU Sports</string>
+        <string>Miss State Sports</string>
+        <string>Missouri Sports</string>
+        <string>Ole Miss Sports</string>
+        <string>South Carolina Sports</string>
+        <string>Tennessee Sports </string>
+        <string>Texas A%amp;M Sports</string>
+        <string>Vanderbilt Sports</string>
+    </array>
+</plist>

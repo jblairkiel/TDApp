@@ -11,11 +11,12 @@ import UIKit
 class BoardThreadsViewCell: UITableViewCell {
     //MARK: Properties
     
-    @IBOutlet weak var boardNameLabel: UILabel!
-    
+    @IBOutlet weak var threadNameLabel: UILabel!
+    @IBOutlet weak var threadAuthorLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

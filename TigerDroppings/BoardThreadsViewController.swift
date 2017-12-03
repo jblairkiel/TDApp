@@ -13,39 +13,40 @@ class BoardThreadsViewController: UITableViewController {
     
     
     //MARK: Properties
+    @IBOutlet weak var boardThreadTitle: UINavigationItem!
     var apiManager = APIManager()
-    var boards = [Board]()
+    var threads = [Thread]()
+    var boardVal: Board? = nil
     
-    private func loadBoards(){
-        apiManager.makeHTTPGetRequest(path: "https://tigerdroppings.com", success: {
+    private func loadThreads(){
+        apiManager.makeHTTPGetRequest(path: (boardVal?.boardURL)!, success: {
             response in
-            print("Got Here")
-            let tdParser = TDParser.init(htmlContent: response,contentType: "Threads")
+            let tdParser = TDParser.init(htmlContent: response,contentType: self.boardVal?.boardName)
             
-            guard let board1 = Board(boardName: "Home", boardURL: "https://tigerdroppings.com/") else{
-                fatalError("Unable to initialize board1")
-            }
+            //guard let board1 = Board(boardName: "Home", boardURL: "https://tigerdroppings.com/") else{
+            //    fatalError("Unable to initialize board1")
+           // }
             
-            guard let board2 = Board(boardName: "SEC Rant", boardURL: "https://www.secrant.com/rant/sec-football/") else{
-                fatalError("Unable to initialize board1")
-            }
+            //guard let board2 = Board(boardName: "SEC Rant", boardURL: "https://www.secrant.com/rant/sec-football/") else{
+            //    fatalError("Unable to initialize board1")
+            //}
             
-            guard let board3 = Board(boardName: "Fark Board", boardURL: "https://www.secrant.com/rant/sec-football/") else{
-                fatalError("Unable to initialize board1")
+            //guard let board3 = Board(boardName: "Fark Board", boardURL: "https://www.secrant.com/rant/sec-football/") ///else{
+            //    fatalError("Unable to initialize board1")
+           // }
+            let arr = tdParser.getItems(tdForum: self.boardVal?.boardName)
+            for thread in arr{
+                self.threads.append(thread)
             }
-            let arr = tdParser.getItems()
-            for link in arr{
-                print(link)
-            }
-            self.boards += [board1, board2, board3]
+            self.tableView.reloadData()
+            //self.threads += [board1, board2, board3]
             
         })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadBoards()
-        
+        loadThreads()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -67,7 +68,8 @@ class BoardThreadsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return boards.count
+        
+        return self.threads.count
     }
     
     
@@ -78,9 +80,13 @@ class BoardThreadsViewController: UITableViewController {
                                                        for: indexPath) as? BoardThreadsViewCell  else {
                                                         fatalError("The dequeued cell is not an instance of BoardThreadsViewCell.")
         }
+
         
-        let board = boards[indexPath.row]
-        cell.boardNameLabel.text = board.boardName
+        let thread = self.threads[indexPath.row]
+        cell.threadNameLabel.numberOfLines = 0;
+        cell.threadNameLabel.lineBreakMode = .byWordWrapping;
+        cell.threadNameLabel.text = thread.threadTitle
+        cell.threadAuthorLabel.text = thread.threadAuthor
         
         return cell
     }

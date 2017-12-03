@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   BoardLinks.plist
+   
+
+   Created by James Kiel on 12/2/17.
+   Copyright (c) 2017 ___ORGANIZATIONNAME___. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>https://tigerdroppings.com/</string>
+        <string>https://www.tigerdroppings.com/rant/lsu-recruiting/</string>
+        <string>https://www.secrant.com/rant/sec-football/</string>
+        <string>https://www.secrant.com/rant/sec-score-board/</string>
+        <string>https://www.secrant.com/rant/sec-tickets/</string>
+        <string>https://www.secrant.com/rant/off-topic/</string>
+        <string>https://www.secrant.com/rant/help/</string>
+        <string>https://www.secrant.com/rant/atl-sports/</string>
+        <string>https://www.secrant.com/rant/alabama-sports/</string>
+        <string>https://www.secrant.com/rant/arkansas-sports/</string>
+        <string>https://www.secrant.com/rant/auburn-sports</string>
+        <string>https://www.secrant.com/rant/gator-sports/</string>
+        <string>https://www.secrant.com/rant/uga-sports/</string>
+        <string>https://www.secrant.com/rant/kentucky-sports/</string>
+        <string>https://www.secrant.com/rant/lsu-sports/</string>
+        <string>https://www.secrant.com/rant/mississippi-st-sports/</string>
+        <string>https://www.secrant.com/rant/mizzou-sports/</string>
+        <string>https://www.secrant.com/rant/ole-miss-sports/</string>
+        <string>https://www.secrant.com/rant/gamecock-sports/</string>
+        <string>https://www.secrant.com/rant/tennessee-sports/</string>
+        <string>https://www.secrant.com/rant/texas-a-m-sports/</string>
+        <string>https://www.secrant.com/rant/vandy-sports/</string>
+    </array>
+</plist>

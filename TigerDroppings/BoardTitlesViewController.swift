@@ -8,16 +8,40 @@
 
 import UIKit
 
+
 class BoardTitlesViewController: UITableViewController {
 
     
     
     //MARK: Properties
     var apiManager = APIManager()
+    var boardNames = [String]()
+    var boardLinks = [String]()
     var boards = [Board]()
+    var selectedBoard: Board? = nil
     
     private func loadBoards(){
     
+        if let URL = Bundle.main.url(forResource: "BoardNames", withExtension: "plist") {
+            if let boardNamesFromPList = NSArray(contentsOf: URL) as? [String] {
+                for boardName in boardNamesFromPList {
+                    boardNames.append(boardName)
+                }
+            }
+        }
+        
+        if let URL = Bundle.main.url(forResource: "BoardLinks", withExtension: "plist") {
+            if let boardLinksFromPList = NSArray(contentsOf: URL) as? [String] {
+                for boardLink in boardLinksFromPList {
+                    boardLinks.append(boardLink)
+                }
+            }
+        }
+        
+        for i in 0 ..< boardNames.count{
+            self.boards.append(Board(boardName: boardNames[i],boardURL:boardLinks[i])!)
+        }
+        /*
         guard let board1 = Board(boardName: "Home", boardURL: "https://tigerdroppings.com/") else{
             fatalError("Unable to initialize board1")
         }
@@ -26,12 +50,12 @@ class BoardTitlesViewController: UITableViewController {
             fatalError("Unable to initialize board1")
         }
         
-        guard let board3 = Board(boardName: "Fark Board", boardURL: "https://www.secrant.com/rant/sec-football/") else{
+        guard let board3 = Board(boardName: "LSU Recruiting", boardURL: "https://www.tigerdroppings.com/rant/lsu-recruiting/") else{
             fatalError("Unable to initialize board1")
-        }
+        }*/
         
         
-        boards += [board1, board2, board3]
+        //boards += [board1, board2, board3]
     }
     
     override func viewDidLoad() {
@@ -76,5 +100,25 @@ class BoardTitlesViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Row \(indexPath.row)selected")
+        selectedBoard = self.boards[indexPath.row]
+        
+        performSegue(withIdentifier: "OpenThreadsSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+        
+        if(segue.identifier == "OpenThreadsSegue") {
+ 
+            var vc = segue.destination as! BoardThreadsViewController
+            vc.boardVal = selectedBoard
+            vc.boardThreadTitle.title = selectedBoard?.boardName
+        }
+    }
+
     
 }
