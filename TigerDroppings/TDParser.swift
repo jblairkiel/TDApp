@@ -21,8 +21,102 @@ public class TDParser{
         content = htmlContent
         type = contentType
     }
+    func getComments(tdForum: String?) -> [Comment]{
+        var arr = [Comment]()
+        do{
+            var elArray = Array<Element?>()
+            let doc: Document = try! SwiftSoup.parse(content)
+            let body: Element = (try! doc.getElementsByClass("Index").first())!
+            //let comments: Elements = try! body.getElementsByClass("row")
+            let comments: Elements = body.children()
+            
+            var commentIter: Int = 0
+            var firstEl: Element? = nil
+            var i: Int = 1
+            var comment: Element? = nil
+            //for comment: Element in comments.array(){
+            while(i < comments.array().count){
+                
+                comment = comments.array()[i]
+                var author: String = ""
+                let authorEL: Elements = try! comment!.getElementsByClass("RegUser")
+                if(authorEL.isEmpty()){
+                    author = ""
+                }else{
+                    author = try! (authorEL.first()?.text())!
+                }
+                if(author == "SR Sponsor"){
+                    i = i+2
+                }
+                else{
+                    commentIter += 1
+                    if(commentIter == 3){
+                        commentIter = 0
+                    }else if (commentIter == 2){
+                        try! firstEl?.append((comment?.html())!)
+                        elArray.append(firstEl)
+                    }else{
+                        firstEl = comment
+                    }
+                    i += 1
+                }
+            }
+            for comment: Element? in elArray{
+                if(comment?.tagName() != "h1"){
+                    let contentEl: Elements = try! comment!.getElementsByClass("pText")
+                    var content: String = " "
+                    if(!contentEl.isEmpty()){
+                        content = try! contentEl.first()!.html()
+                    }
+                    let link: String = " "
+                    let author: String = try! comment!.getElementsByClass("RegUser").first()!.text()
+                    let authorLink: String = try! comment!.getElementsByClass("RegUser").first()!.attr("href")
+                    let avatarEl: Elements = try! comment!.getElementsByClass("ava")
+                    var avatar: String = " "
+                    if(!avatarEl.isEmpty()){
+                        avatar = try! avatarEl.attr("src")
+                    }
+                    let signatureEl: Elements = try! comment!.getElementsByClass("SigText")
+                    var signature: String = " "
+                    if(!signatureEl.isEmpty()){
+                        signature = try! signatureEl.first()!.text()
+                    }
+                    
+                    let signaturePicEl: Elements = try! comment!.getElementsByClass("Sig")
+                    var signaturePic: String = " "
+                    if(!signaturePicEl.isEmpty()){
+                        signaturePic = try! signaturePicEl.first()!.attr("src")
+                    }
+                    var commentDetails: String = try! comment!.getElementsByClass("PostInfo").first()!.text()
+                    if(commentDetails == " "){
+                        commentDetails = (try! comment?.getElementsByClass("editText").first()!.text())!
+                    }
+                    let likesUpE: Elements = try! comment!.getElementsByClass("mbThUp")
+                    var likesUp: String = ""
+                    if(!likesUpE.isEmpty()){
+                        likesUp = try! likesUpE.first()!.text()
+                    }else{
+                        likesUp = "0"
+                    }
+                    let likesDownEl: Elements = try! comment!.getElementsByClass("mbThDown")
+                    var likesDown: String = ""
+                    if(!likesDownEl.isEmpty()){
+                        likesDown = try! likesDownEl.first()!.text()
+                    }else{
+                        likesDown = "0"
+                    }
+                    if(author == "SR Sponsor"){
+                        arr.append(Comment(content: "Advertisement", author: "SR Sponsor", link: "#", authorLink: "#", avatar: "", signature: "", signaturePic: "", commentDetails: "", likesUp: "", likesDown: "")!)
+                    }else{
+                        arr.append(Comment(content: content, author: author, link: link, authorLink: authorLink, avatar: avatar, signature: signature, signaturePic: signaturePic, commentDetails: commentDetails, likesUp: likesUp,likesDown: likesDown)!)
+                    }
+                }
+            }
+            return arr
+        }
+    }
     
-    func getItems(tdForum: String?) -> [Thread]{
+    func getThreads(tdForum: String?) -> [Thread]{
         var arr = [Thread]()
         if(type == "Home"){
             do{

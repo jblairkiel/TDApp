@@ -17,36 +17,25 @@ class BoardThreadsViewController: UITableViewController {
     var apiManager = APIManager()
     var threads = [Thread]()
     var boardVal: Board? = nil
+    var selectedThread: Thread? = nil
     
     private func loadThreads(){
         apiManager.makeHTTPGetRequest(path: (boardVal?.boardURL)!, success: {
             response in
             let tdParser = TDParser.init(htmlContent: response,contentType: self.boardVal?.boardName)
+            let arr = tdParser.getThreads(tdForum: self.boardVal?.boardName)
             
-            //guard let board1 = Board(boardName: "Home", boardURL: "https://tigerdroppings.com/") else{
-            //    fatalError("Unable to initialize board1")
-           // }
-            
-            //guard let board2 = Board(boardName: "SEC Rant", boardURL: "https://www.secrant.com/rant/sec-football/") else{
-            //    fatalError("Unable to initialize board1")
-            //}
-            
-            //guard let board3 = Board(boardName: "Fark Board", boardURL: "https://www.secrant.com/rant/sec-football/") ///else{
-            //    fatalError("Unable to initialize board1")
-           // }
-            let arr = tdParser.getItems(tdForum: self.boardVal?.boardName)
             for thread in arr{
                 self.threads.append(thread)
             }
             self.tableView.reloadData()
-            //self.threads += [board1, board2, board3]
-            
         })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadThreads()
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -89,6 +78,25 @@ class BoardThreadsViewController: UITableViewController {
         cell.threadAuthorLabel.text = thread.threadAuthor
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Row \(indexPath.row)selected")
+        selectedThread = self.threads[indexPath.row]
+        
+        performSegue(withIdentifier: "OpenCommentsSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+        
+        if(segue.identifier == "OpenCommentsSegue") {
+            
+            let vc = segue.destination as! ThreadCommentsViewController
+            vc.threadVal = selectedThread
+            //vc.thread.title = selectedBoard?.boardName
+        }
     }
     
 }

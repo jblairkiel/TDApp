@@ -61,6 +61,7 @@ class BoardTitlesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadBoards()
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -114,7 +115,7 @@ class BoardTitlesViewController: UITableViewController {
         
         if(segue.identifier == "OpenThreadsSegue") {
  
-            var vc = segue.destination as! BoardThreadsViewController
+            let vc = segue.destination as! BoardThreadsViewController
             vc.boardVal = selectedBoard
             vc.boardThreadTitle.title = selectedBoard?.boardName
         }
