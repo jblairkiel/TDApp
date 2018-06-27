@@ -75,8 +75,8 @@ class ThreadCommentsViewController: UITableViewController,WKUIDelegate {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //return self.contentHeights[indexPath.row]
-        return UITableViewAutomaticDimension
+        return self.contentHeights[indexPath.row]
+        //return UITableViewAutomaticDimension
     }
 
 
@@ -102,8 +102,8 @@ class ThreadCommentsViewController: UITableViewController,WKUIDelegate {
         cell.commentContentWV.tag = indexPath.row
         cell.commentContentWV.loadHTMLString(comment.commentContent, baseURL: nil)
         cell.commentContentWV.evaluateJavaScript("document.readyState", completionHandler: { (complete, error) in
-            if complete != nil {
-                cell.commentContentWV.evaluateJavaScript("document.body.scrollHeight", completionHandler: { (height, error) in
+            if (complete != nil && self.contentHeights[indexPath.row] == CGFloat(100.0)) {
+                cell.commentContentWV.evaluateJavaScript("document.body.offsetHeight",completionHandler: {(height,error) in//scrollHeight", completionHandler: { (height, error) in
                     
                     let h: CGFloat = height as! CGFloat
                     
@@ -114,10 +114,16 @@ class ThreadCommentsViewController: UITableViewController,WKUIDelegate {
                     //self.frame = CGRect(x: tableCellFrame.minX, y: tableCellFrame.minY, width: tableCellFrame.width, height: tableCellFrame.height + h)
                     
                     cell.commentContentWV.frame = CGRect(x: tableCellFrame.minX, y: tableCellFrame.minY, width: cell.frame.size.width, height: cell.frame.height + h)
+                    self.contentHeights[indexPath.row] = cell.frame.height + (h - 100)
+                    
+                    let indexPaths = IndexPath(item: indexPath.row, section: 0)
+                    tableView.reloadRows(at: [indexPaths], with: .top)
                     
                 })
             }
         })
+        
+        
         
         cell.authorLabel.text = comment.commentAuthor
         cell.greenUpvotesLabel.text = comment.commentLikesUp

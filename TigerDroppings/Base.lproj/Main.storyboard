@@ -139,10 +139,15 @@
                                             <rect key="frame" x="336" y="123" width="23" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="23" id="Cuy-6i-lxZ"/>
+                                                <constraint firstAttribute="height" constant="24" id="koL-zZ-926"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="IEO-db-Kp2">
                                             <rect key="frame" x="336" y="151" width="23" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="23" id="K3J-lY-8C6"/>
+                                                <constraint firstAttribute="height" constant="24" id="gd3-xH-qTj"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBe-Fp-xm5">
                                             <rect key="frame" x="303" y="151" width="25" height="24"/>
@@ -175,7 +180,7 @@
                                     <constraints>
                                         <constraint firstItem="eBe-Fp-xm5" firstAttribute="top" secondItem="PhU-wE-18p" secondAttribute="bottom" constant="4" id="1aj-Xh-Vmj"/>
                                         <constraint firstItem="PhU-wE-18p" firstAttribute="top" secondItem="Xov-mM-qmp" secondAttribute="top" id="3X2-2I-FgA"/>
-                                        <constraint firstItem="eBe-Fp-xm5" firstAttribute="leading" relation="lessThanOrEqual" secondItem="vpB-in-lGB" secondAttribute="trailing" constant="189" id="9Hx-Ne-CcO"/>
+                                        <constraint firstItem="eBe-Fp-xm5" firstAttribute="leading" secondItem="vpB-in-lGB" secondAttribute="trailing" constant="189" id="9Hx-Ne-CcO"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="eBe-Fp-xm5" secondAttribute="bottom" constant="-6" id="AFL-Bd-SdG"/>
                                         <constraint firstItem="yYS-Px-tY5" firstAttribute="trailing" secondItem="YfN-cL-59k" secondAttribute="trailingMargin" id="IbP-Zm-bJI"/>
                                         <constraint firstItem="eBe-Fp-xm5" firstAttribute="bottom" secondItem="IEO-db-Kp2" secondAttribute="bottom" id="MlL-JC-fsS"/>

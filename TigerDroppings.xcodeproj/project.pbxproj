@@ -53,6 +53,7 @@
 		00CAB45F1FD4A6820030E03E /* BoardThreadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C037861FCB693B00F1B505 /* BoardThreadsViewController.swift */; };
 		00CAB4601FD4A6850030E03E /* BoardTitlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004368011FCA719300A2C020 /* BoardTitlesViewController.swift */; };
 		00CAB4611FD4A6850030E03E /* BoardTitlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004368011FCA719300A2C020 /* BoardTitlesViewController.swift */; };
+		00D2E5F820E361E0000DC782 /* AlamoFire + SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2E5F720E361E0000DC782 /* AlamoFire + SessionManager.swift */; };
 		00D6E2641FCB054600390648 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6E2631FCB054600390648 /* APIManager.swift */; };
 		1325F6E0AA25549AD0EFE266 /* Pods_TigerDroppingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8BBDDB95C941ABE10706F5 /* Pods_TigerDroppingsTests.framework */; };
 		49EEDE6F110647DC87B8CB8C /* Pods_TigerDroppingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B7A3B18C6F57B74A1BC0D0 /* Pods_TigerDroppingsUITests.framework */; };
@@ -117,6 +118,7 @@
 		00CAB44A1FD438960030E03E /* ThreadCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCommentsViewController.swift; sourceTree = "<group>"; };
 		00CAB44E1FD439030030E03E /* ThreadCommentsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCommentsViewCell.swift; sourceTree = "<group>"; };
 		00CAB4521FD439680030E03E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		00D2E5F720E361E0000DC782 /* AlamoFire + SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlamoFire + SessionManager.swift"; sourceTree = "<group>"; };
 		00D6E2631FCB054600390648 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1C452B4071EE4428E0C8BA2E /* Pods-TigerDroppings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerDroppings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TigerDroppings/Pods-TigerDroppings.debug.xcconfig"; sourceTree = "<group>"; };
 		65B7A3B18C6F57B74A1BC0D0 /* Pods_TigerDroppingsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TigerDroppingsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +185,7 @@
 		004367D01FCA6DA500A2C020 /* TigerDroppings */ = {
 			isa = PBXGroup;
 			children = (
+				00D2E5F620E361B4000DC782 /* Extensions */,
 				00CAB4461FD3A8E20030E03E /* BoardLinks.plist */,
 				00CAB43E1FD3A8520030E03E /* BoardNames.plist */,
 				004367D11FCA6DA500A2C020 /* AppDelegate.swift */,
@@ -223,6 +226,14 @@
 				004367F31FCA6DA500A2C020 /* Info.plist */,
 			);
 			path = TigerDroppingsUITests;
+			sourceTree = "<group>";
+		};
+		00D2E5F620E361B4000DC782 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00D2E5F720E361E0000DC782 /* AlamoFire + SessionManager.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		570D35C6C322E4CCC75AC01E /* Pods */ = {
@@ -576,6 +587,7 @@
 			files = (
 				00D6E2641FCB054600390648 /* APIManager.swift in Sources */,
 				001D86CB1FCE52F0009D0AD5 /* Thread.swift in Sources */,
+				00D2E5F820E361E0000DC782 /* AlamoFire + SessionManager.swift in Sources */,
 				004368021FCA719300A2C020 /* BoardTitlesViewController.swift in Sources */,
 				004367D41FCA6DA500A2C020 /* ViewController.swift in Sources */,
 				00CAB44F1FD439030030E03E /* ThreadCommentsViewCell.swift in Sources */,

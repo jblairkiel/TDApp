@@ -17,6 +17,7 @@ public class APIManager {
     }
     
     public func makeHTTPGetRequest(path: String, success: @escaping (String) -> Void){
+        URLCache.shared.removeAllCachedResponses()
         Alamofire.request(path).responseJSON {
             response in
             //print("Request: \(String(describing: response.request))")   // original url request
