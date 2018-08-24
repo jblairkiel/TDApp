@@ -116,9 +116,13 @@ class ThreadCommentsViewController: UITableViewController,WKUIDelegate {
                     cell.commentContentWV.frame = CGRect(x: tableCellFrame.minX, y: tableCellFrame.minY, width: cell.frame.size.width, height: cell.frame.height + h)
                     self.contentHeights[indexPath.row] = cell.frame.height + (h - 100)
                     
-                    let indexPaths = IndexPath(item: indexPath.row, section: 0)
-                    tableView.reloadRows(at: [indexPaths], with: .top)
                     
+                    //let indexPaths = IndexPath(item: indexPath.row, section: 0)
+                    //tableView.reloadRows(at:[indexPaths], with: .none)
+                    if(self.allLoaded()){
+                        //tableView.reloadData()
+                        tableView.reloadSections([0], with: .none)
+                    }
                 })
             }
         })
@@ -128,6 +132,8 @@ class ThreadCommentsViewController: UITableViewController,WKUIDelegate {
         cell.authorLabel.text = comment.commentAuthor
         cell.greenUpvotesLabel.text = comment.commentLikesUp
         cell.redDownvotesLabel.text = comment.commentLikesDown
+        cell.contentView.layer.borderColor = UIColor.black.cgColor
+        cell.contentView.layer.borderWidth = 0.8
         
         self.tableView.setNeedsLayout()
         self.tableView.layoutIfNeeded()
@@ -148,7 +154,15 @@ class ThreadCommentsViewController: UITableViewController,WKUIDelegate {
         }
     }
     
-
+    private func allLoaded() -> Bool {
+        let allRowsHeights = self.contentHeights
+        for height in allRowsHeights{
+        if(height == CGFloat(5.0)){
+        return false
+        }
+        }
+        return true;
+    }
     
     //override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
     //    return UITableViewAutomaticDimension

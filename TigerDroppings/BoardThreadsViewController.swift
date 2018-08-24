@@ -76,6 +76,8 @@ class BoardThreadsViewController: UITableViewController {
         cell.threadNameLabel.lineBreakMode = .byWordWrapping;
         cell.threadNameLabel.text = thread.threadTitle
         cell.threadAuthorLabel.text = thread.threadAuthor
+        cell.contentView.layer.borderColor = UIColor.black.cgColor
+        cell.contentView.layer.borderWidth = 0.8
         
         return cell
     }
@@ -98,6 +100,7 @@ class BoardThreadsViewController: UITableViewController {
             //vc.thread.title = selectedBoard?.boardName
         }
     }
+    
     
 }
 

@@ -47,14 +47,17 @@ public class TDParser{
                 }
                 if(author == "SR Sponsor"){
                     i = i+2
+                    continue
                 }
                 else{
                     commentIter += 1
-                    if(commentIter == 3){
-                        commentIter = 0
-                    }else if (commentIter == 2){
+                    //if(commentIter == 3){
+                    //    commentIter = 0
+                    //}else
+                    if (commentIter == 2){
                         try! firstEl?.append((comment?.html())!)
                         elArray.append(firstEl)
+                        commentIter = 0
                     }else{
                         firstEl = comment
                     }

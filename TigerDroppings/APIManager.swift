@@ -13,12 +13,13 @@ public class APIManager {
     
     
     init(){
-        
     }
     
     public func makeHTTPGetRequest(path: String, success: @escaping (String) -> Void){
-        URLCache.shared.removeAllCachedResponses()
-        Alamofire.request(path).responseJSON {
+        //URLCache.shared.removeAllCachedResponses()
+        let sessionManager = Alamofire.SessionManager.default
+        URLCache.shared = URLCache(memoryCapacity: 0, diskCapacity: 0, diskPath: nil)
+        sessionManager.request(path).responseJSON {
             response in
             //print("Request: \(String(describing: response.request))")   // original url request
             //print("Response: \(String(describing: response.response))") // http url response
