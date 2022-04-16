@@ -18,6 +18,7 @@ class ThreadCommentsViewCell: UITableViewCell {
     @IBOutlet weak var greenUpvotesLabel: UILabel!
     @IBOutlet weak var redDownvotesLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var startLabel: UILabel!
     
     
     override func awakeFromNib() {

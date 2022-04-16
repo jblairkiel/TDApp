@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import SwiftSoup
 
 class ThreadCommentsViewController: UITableViewController,WKUIDelegate {
     
@@ -97,38 +98,19 @@ class ThreadCommentsViewController: UITableViewController,WKUIDelegate {
         }
         
         let comment = self.comments[indexPath.row]
+        let commentEls = self.comments[indexPath.row].commentContent
+        var i: Int = 0
+        
+        var commentContent: Element? = nil
+        while(i < commentEls.count){
+            commentContent = commentEls[i]
+            if(commentContent?.tagName() != "h1"){
+                print("test")
+            }
+            i += 1
+        }
         
         trIndexPath = indexPath
-        cell.commentContentWV.tag = indexPath.row
-        cell.commentContentWV.loadHTMLString(comment.commentContent, baseURL: nil)
-        cell.commentContentWV.evaluateJavaScript("document.readyState", completionHandler: { (complete, error) in
-            if (complete != nil && self.contentHeights[indexPath.row] == CGFloat(100.0)) {
-                cell.commentContentWV.evaluateJavaScript("document.body.offsetHeight",completionHandler: {(height,error) in//scrollHeight", completionHandler: { (height, error) in
-                    
-                    let h: CGFloat = height as! CGFloat
-                    
-                    //let newsContentFrame: CGRect = self.newsContentViewContainer.frame
-                    //self.newsContentViewContainer.frame = CGRect(x: newsContentFrame.minX, y: newsContentFrame.minY, width: newsContentFrame.width, height: h)
-                    
-                    let tableCellFrame: CGRect = cell.commentContentWV.frame
-                    //self.frame = CGRect(x: tableCellFrame.minX, y: tableCellFrame.minY, width: tableCellFrame.width, height: tableCellFrame.height + h)
-                    
-                    cell.commentContentWV.frame = CGRect(x: tableCellFrame.minX, y: tableCellFrame.minY, width: cell.frame.size.width, height: cell.frame.height + h)
-                    self.contentHeights[indexPath.row] = cell.frame.height + (h - 100)
-                    
-                    
-                    //let indexPaths = IndexPath(item: indexPath.row, section: 0)
-                    //tableView.reloadRows(at:[indexPaths], with: .none)
-                    if(self.allLoaded()){
-                        //tableView.reloadData()
-                        tableView.reloadSections([0], with: .none)
-                    }
-                })
-            }
-        })
-        
-        
-        
         cell.authorLabel.text = comment.commentAuthor
         cell.greenUpvotesLabel.text = comment.commentLikesUp
         cell.redDownvotesLabel.text = comment.commentLikesDown

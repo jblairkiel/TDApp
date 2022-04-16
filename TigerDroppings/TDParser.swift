@@ -67,9 +67,9 @@ public class TDParser{
             for comment: Element? in elArray{
                 if(comment?.tagName() != "h1"){
                     let contentEl: Elements = try! comment!.getElementsByClass("pText")
-                    var content: String = " "
+                    var content = Array<Element?>()
                     if(!contentEl.isEmpty()){
-                        content = try! contentEl.first()!.html()
+                        content = contentEl.array()
                     }
                     let link: String = " "
                     let author: String = try! comment!.getElementsByClass("RegUser").first()!.text()
@@ -108,8 +108,18 @@ public class TDParser{
                     }else{
                         likesDown = "0"
                     }
-                    if(author == "SR Sponsor"){
-                        arr.append(Comment(content: "Advertisement", author: "SR Sponsor", link: "#", authorLink: "#", avatar: "", signature: "", signaturePic: "", commentDetails: "", likesUp: "", likesDown: "")!)
+                    if(author == "SR Sponsor" || author == "TD Sponsor"){
+                        do{
+                            let html: String = "<p></p>";
+                            let doc: Document = try SwiftSoup.parse(html)
+                            let dummy: Array<Element> = try doc.select("p").array()
+                            arr.append(Comment(content: dummy, author: "SR Sponsor", link: "#", authorLink: "#", avatar: "", signature: "", signaturePic: "", commentDetails: "", likesUp: "", likesDown: "")!)
+                        }catch Exception.Error(let _, let message) {
+                            print(message)
+                        } catch {
+                            print("error")
+                        }
+                        
                     }else{
                         arr.append(Comment(content: content, author: author, link: link, authorLink: authorLink, avatar: avatar, signature: signature, signaturePic: signaturePic, commentDetails: commentDetails, likesUp: likesUp,likesDown: likesDown)!)
                     }

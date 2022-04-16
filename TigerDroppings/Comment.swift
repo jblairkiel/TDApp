@@ -7,13 +7,13 @@
 //
 
 import Foundation
-
+import SwiftSoup
 
 public class Comment {
     
     //MARK: Properties
     
-    var commentContent: String = ""
+    var commentContent = Array<Element?>()
     var commentAuthor: String = ""
     var authorLink: String = ""
     var authorAvatar: String? = ""
@@ -27,9 +27,9 @@ public class Comment {
     
     //MARK: Initialization
     
-    init?(content: String, author: String, link: String, authorLink: String, avatar: String?, signature: String?, signaturePic: String?, commentDetails: String?, likesUp: String?, likesDown: String?) {
+    init?(content: Array<Element?>, author: String, link: String, authorLink: String, avatar: String?, signature: String?, signaturePic: String?, commentDetails: String?, likesUp: String?, likesDown: String?) {
         
-        if(content == "" || link == ""){
+        if(content.count == 0 || link == ""){
             return nil
         }
         
@@ -46,7 +46,8 @@ public class Comment {
     }
     
     func toString() -> Void{
-        print("Content: "  + self.commentContent)
+        print("Content: ")
+        print (self.commentContent)
         print("Author: " + self.commentAuthor)
         print("Author Link: "  + self.authorLink)
         print("Avatar: "  + self.authorAvatar!)
